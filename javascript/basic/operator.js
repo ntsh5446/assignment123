@@ -9,3 +9,4 @@ console.log(z)
 //Check below code, output should be false by comparing. console.log the answer
 const a = 10
 const b = '10'
+console.log(a == b)
