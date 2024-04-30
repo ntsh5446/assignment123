@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.Greet {
+  background-color: blue;
+  margin: 10px;
+  padding: 3px;
+  width: 400px
+}
