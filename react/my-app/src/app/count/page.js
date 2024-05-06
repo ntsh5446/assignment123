@@ -2,20 +2,25 @@
 import React,{useState} from 'react'
 
 const page = () => {
-let {Number,setNumber}=useState(5)
+let [number,setNumber]= useState(5)
 
 const increment=()=>{
-    setNumber(number+1)
+  if (number<10)
+return
+   setNumber(number + 1)
 }
 
 const decrement=()=>{
-    setNumber(number+1)
+  if (number>0)
+    return
+    setNumber(number - 1)
 }
 
   return (
     <div>
-        <button onClick={increment}>+</button>
-        <button onClick={decrement}>-</button>
+        <button className='bg-teal-200 p-2 m-2' onClick={increment}>+</button>
+        {number}
+        <button className='bg-teal-200 p-2 m-2' onClick={decrement}>-</button>
     </div>
   )
 }
