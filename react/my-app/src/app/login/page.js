@@ -14,9 +14,9 @@ const login
         <div className='text-center text-5xl p-4 font-serif '>
         <h1>Facebook</h1></div>
        <div className="  p-2 m-2">
-      <Input type="email" placeholder="Enter your user or email" /> <br/></div>
+      <Input type="email" placeholder="Enter your user or email" /></div>
       <div className="  p-2 m-2 ">
-      <Input type="password"  placeholder="Enter your password" /><br/></div>
+      <Input type="password"  placeholder="Enter your password" /></div>
       <div className='text-center  decoration-auto'>
       <Button color="primary">login </Button></div>
       <div className='text-center p-6'>

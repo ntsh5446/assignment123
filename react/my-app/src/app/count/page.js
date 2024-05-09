@@ -6,13 +6,11 @@ let [number,setNumber]= useState(5)
 
 const increment=()=>{
   if (number<10)
-return
    setNumber(number + 1)
 }
 
 const decrement=()=>{
   if (number>0)
-    return
     setNumber(number - 1)
 }
 
