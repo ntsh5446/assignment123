@@ -6,7 +6,7 @@ import { Input, Button } from "@nextui-org/react";
 
 
 const SignupSchema = Yup.object().shape({
-  firstName: Yup.string()
+  fullName: Yup.string()
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
     .length(8, "must be eight character")
@@ -24,7 +24,7 @@ const SignupSchema = Yup.object().shape({
 const SignupForm = () => {
   const formik = useFormik({
     initialValues: {
-      firstName: '',
+      fullName: '',
       lastName: '',
       email: '',
     },
@@ -37,20 +37,20 @@ const SignupForm = () => {
     <div className='	
     bg-gray-500 flex justify-center p-10 m-10'>
       <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="FirstName">First Name</label>
+        <label htmlFor="fullName">fullName Name</label>
         <Input
           isClearable
-          name='firstName'
-          type="Input Firstname"
+          name='fullName'
+          type="Input fullname"
           variant="bordered"
-          placeholder="Enter your Firstname"
+          placeholder="Enter your fullname"
           defaultValue=" "
           onClear={() => {
-            formik.setFieldValue("firstName", '')
+            formik.setFieldValue("fullName", '')
           }}
           className="max-w-xs"
           onChange={formik.handleChange}
-          value={formik.values.firstName}
+          value={formik.values.fullName}
         />
         {formik.errors.firstName ? <div className='text-red-700'>{formik.errors.firstName}</div> : null}
         <label htmlFor="Lastname">Last Name</label>
@@ -90,23 +90,23 @@ const SignupForm = () => {
         {/* {formik.errors.email} */}
         {formik.errors.email ? <div className='text-red-700'>{formik.errors.email}</div> : null}
 
-        <label htmlFor="Password">Password</label>
+        <label htmlFor="Address">Address</label>
         <Input
           isClearable
-          type="password"
-          name="password"
+          type="text"
+          name="Address"
           variant="bordered"
-          placeholder="Enter your password"
+          placeholder="Enter your Address"
           defaultValue=""
           onClear={() => {
-            formik.setFieldValue("password", '')
+            formik.setFieldValue("address", '')
           }}
           className="max-w-xs"
           onChange={formik.handleChange}
-          value={formik.values.password}
+          value={formik.values.Address}
         />
-        {/* {formik.errors.password} */}
-        {formik.errors.password ? <div className='text-red-700'>{formik.errors.password}</div> : null}
+        {/* {formik.errors.Address} */}
+        {formik.errors.Address ? <div className='text-red-700'>{formik.errors.Address}</div> : null}
         <div className='p-2 m-2'>
           <Button color="primary" type='submit'>Submit</Button> </div>
 
